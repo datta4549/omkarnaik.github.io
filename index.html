@@ -1,439 +1,309 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Omkar Naik | Data Scientist & Analyst</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omkar Naik | Data Analyst</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8; /* Sky Blue for Data */
+            --accent-hover: #0ea5e9;
+            --gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+        }
 
-		<style>
-			/* Basic Resets & Global Styles */
-			body {
-				font-family: 'Inter', sans-serif; /* New primary font */
-				color: #333; /* Darker text for better readability */
-				background: #f0f2f5; /* Light grey background */
-			}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-			#wrapper {
-				background: #ffffff; /* White content background */
-				box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* Subtle shadow */
-			}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
 
-			h1, h2, h3, h4, h5, h6 {
-				font-family: 'Poppins', sans-serif; /* New heading font */
-				color: #2c3e50; /* Darker headings */
-				line-height: 1.2;
-			}
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
 
-			/* Intro Section */
-			#intro {
-				background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('images/bg.jpg'); /* Darker overlay */
-				background-size: cover;
-				background-position: center;
-				min-height: 70vh; /* Make it a bit shorter */
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				text-align: center;
-				color: #ffffff;
-			}
-			#intro h1 {
-				font-size: 3.5em; /* Larger heading */
-				margin-bottom: 0.2em;
-				color: #ffffff;
-			}
-			#intro p {
-				font-size: 1.4em;
-				max-width: 800px;
-				color: rgba(255, 255, 255, 0.9);
-			}
+        /* --- NAVBAR --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
 
-			.typewriter-text {
-				border-right: 2px solid rgba(255, 255, 255, 0.75);
-				padding-right: 5px;
-				animation: blink 0.75s step-end infinite;
-			}
-			@keyframes blink {
-				from, to { border-color: transparent }
-				50% { border-color: rgba(255, 255, 255, 0.75); }
-			}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-			/* Navigation */
-			#nav {
-				background: #2c3e50; /* Darker nav background */
-				padding: 0.8em 0;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-			}
-			#nav .links li a {
-				color: rgba(255, 255, 255, 0.8);
-				font-weight: 600;
-				letter-spacing: 0.05em;
-				transition: color 0.3s ease;
-			}
-			#nav .links li a:hover, #nav .links li.active a {
-				color: #4CAF50; /* Green accent color */
-			}
-			#nav .icons li a {
-				color: rgba(255, 255, 255, 0.6);
-				transition: color 0.3s ease;
-			}
-			#nav .icons li a:hover {
-				color: #ffffff;
-			}
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { color: var(--text-secondary); font-weight: 500; }
+        .nav-links a:hover { color: var(--accent); }
+        
+        .btn-resume {
+            padding: 0.5rem 1.5rem;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+        .btn-resume:hover { background: rgba(56, 189, 248, 0.1); }
 
-			/* Header (Logo) */
-			#header .logo {
-				background: #4CAF50; /* Green accent */
-				color: #ffffff;
-				padding: 0.5em 1em;
-				border-radius: 5px;
-				font-size: 1.2em;
-				font-weight: 700;
-				text-transform: uppercase;
-				letter-spacing: 0.1em;
-			}
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Centered */
+            text-align: center;
+            padding: 0 5%;
+            padding-top: 60px;
+        }
 
-			/* Project Cards */
-			.post {
-				background: #ffffff;
-				border-radius: 8px;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-				transition: transform 0.3s ease, box-shadow 0.3s ease;
-				overflow: hidden; /* Important for image */
-			}
-			.post:hover {
-				transform: translateY(-5px);
-				box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-			}
-			.post .image {
-				border-bottom: 1px solid #eee; /* Separator */
-			}
-			.post .image img {
-				transition: transform 0.5s ease;
-			}
-			.post:hover .image img {
-				transform: scale(1.05);
-			}
-			.post header.major h2 a {
-				color: #2c3e50;
-				transition: color 0.3s ease;
-			}
-			.post header.major h2 a:hover {
-				color: #4CAF50;
-			}
-			.post .date {
-				color: #777;
-				font-size: 0.9em;
-			}
-			.post p {
-				color: #555;
-				line-height: 1.6;
-			}
-			.post .actions .button {
-				background: #4CAF50;
-				color: #ffffff;
-				border-radius: 5px;
-				transition: background-color 0.3s ease;
-			}
-			.post .actions .button:hover {
-				background: #43a047;
-			}
-			.post .actions .button.alt { /* For View Code button */
-				background: #34495e;
-			}
-			.post .actions .button.alt:hover {
-				background: #2c3e50;
-			}
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+        
+        .hero h1 span { color: var(--accent); }
 
-			/* Tech Stack Section */
-			.tech-stack-section {
-				padding: 3em 0;
-				text-align: center;
-				background: #ecf0f1; /* Light grey */
-				margin-bottom: 2em;
-				border-radius: 8px;
-			}
-			.tech-stack-section h2 {
-				margin-bottom: 1em;
-				color: #2c3e50;
-			}
-			.tech-stack-icons {
-				display: flex;
-				justify-content: center;
-				flex-wrap: wrap;
-				gap: 30px;
-			}
-			.tech-stack-item {
-				text-align: center;
-				opacity: 0.8;
-				transition: opacity 0.3s ease, transform 0.3s ease;
-			}
-			.tech-stack-item:hover {
-				opacity: 1;
-				transform: translateY(-5px);
-			}
-			.tech-stack-item i {
-				font-size: 3em;
-				color: #34495e; /* Darker icon color */
-				margin-bottom: 0.2em;
-			}
-			.tech-stack-item span {
-				display: block;
-				font-size: 0.9em;
-				color: #555;
-			}
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
 
-			/* Contact Section */
-			#footer .split {
-				background: #f8f8f8;
-				border-radius: 8px;
-				padding: 2em;
-				box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-			}
-			#footer .split h3 {
-				color: #2c3e50;
-			}
-			#footer .split p, #footer .split a {
-				color: #555;
-			}
-			#footer .split a:hover {
-				color: #4CAF50;
-			}
-			#footer .icons.alt li a {
-				color: #777;
-				transition: color 0.3s ease;
-			}
-			#footer .icons.alt li a:hover {
-				color: #4CAF50;
-			}
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
 
-			/* Copyright */
-			#copyright {
-				background: #2c3e50;
-				color: rgba(255,255,255,0.6);
-				padding: 1.5em 0;
-				text-align: center;
-				font-size: 0.9em;
-				margin-top: 2em;
-			}
-			#copyright a {
-				color: #4CAF50;
-			}
-		</style>
-	</head>
-	<body class="is-preload">
+        .social-links a {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+        }
+        .social-links a:hover { color: var(--accent); transform: translateY(-3px); }
 
-		<div id="wrapper" class="fade-in">
+        /* --- SKILLS --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
 
-				<div id="intro">
-						<h1>Omkar Naik</h1>
-						<p>Turning complex datasets into clear, actionable insights.<br />
-						I am a <span id="typing-text" class="typewriter-text">Data Analyst</span></p>
-						
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        .skill-tag {
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--accent);
+            border: 1px solid rgba(255,255,255,0.05);
+        }
 
-				<header id="header">
-						<a href="index.html" class="logo">Omkar Naik</a>
-					</header>
+        /* --- PROJECTS --- */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 4rem 0 2rem;
+        }
 
-				<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="assets/resume.pdf" target="_blank">Resume</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/omkarnaik2001/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/datta4549" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="mailto:naikomkar575@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-					</nav>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 5% 5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-				<div id="main">
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+        }
 
-						<section class="tech-stack-section">
-							<h2>My Tech Stack</h2>
-							<div class="tech-stack-icons">
-								<div class="tech-stack-item">
-									<i class="fab fa-python"></i>
-									<span>Python</span>
-								</div>
-								<div class="tech-stack-item">
-									<i class="fas fa-database"></i>
-									<span>SQL</span>
-								</div>
-								<div class="tech-stack-item">
-									<i class="fas fa-leaf"></i> <span>MongoDB</span>
-								</div>
-								<div class="tech-stack-item">
-									<i class="fas fa-chart-bar"></i>
-									<span>Power BI</span>
-								</div>
-								<div class="tech-stack-item">
-									<i class="fas fa-brain"></i>
-									<span>Scikit-Learn</span>
-								</div>
-								<div class="tech-stack-item">
-									<i class="fab fa-git-alt"></i>
-									<span>Git</span>
-								</div>
-								<div class="tech-stack-item">
-									<i class="fas fa-file-excel"></i>
-									<span>Excel</span>
-								</div>
-							</div>
-						</section>
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-color: var(--accent);
+        }
 
-						<article class="post featured">
-								<header class="major">
-									<span class="date">Featured Project</span>
-									<h2><a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" target="_blank">Flights Fare<br />
-									Predictor</a></h2>
-									<p>Developed a Streamlit web application leveraging Machine Learning to predict flight prices. The model utilizes advanced algorithms and provides interactive visualizations for real-time insights, demonstrating proficiency in full-stack data science deployment.</p>
-								</header>
-								<a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" target="_blank" class="image main"><img src="images/How-to-Use-a-Flight-Price-Tracker-to-Get-the-Best-Airfare-Possible-FT-GettyImages2.jpg" alt="Flight Prediction App" /></a>
-								<ul class="actions special">
-									<li><a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" target="_blank" class="button large">View Live App</a></li>
-									<li><a href="https://github.com/datta4549/Flight_Price_Prediction" target="_blank" class="button large icon brands fa-github alt">View Code</a></li>
-								</ul>
-							</article>
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
 
-						<section class="posts">
-								
-								<article>
-									<header>
-										<span class="date">Machine Learning | Classification</span>
-										<h2><a href="https://github.com/datta4549/MLprojects/tree/main/Holiday%20Package%20Prediction" target="_blank">Holiday Package<br />
-										Prediction</a></h2>
-									</header>
-									<a href="https://github.com/datta4549/MLprojects/tree/main/Holiday%20Package%20Prediction" target="_blank" class="image fit"><img src="images/dataset-cover.jpg" alt="Travel Dataset" /></a>
-									<p>Built a classification model to predict customer likelihood of purchasing a new travel package, improving targeted marketing efficiency and conversion rates by X% (add a number if you have one!).</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/datta4549/MLprojects/tree/main/Holiday%20Package%20Prediction" target="_blank" class="button">View Code</a></li>
-									</ul>
-								</article>
+        .card-content { padding: 1.5rem; }
 
-								<article>
-									<header>
-										<span class="date">Business Intelligence | Power BI</span>
-										<h2><a href="https://app.powerbi.com/reportEmbed?reportId=f1b090fc-1f0b-4742-bbe4-14ccf2586771&autoAuth=true&ctid=0a812a92-d516-4867-adcf-2d2b3ce122ef" target="_blank">Interactive Power BI<br />
-										Dashboards</a></h2>
-									</header>
-									<a href="https://app.powerbi.com/reportEmbed?reportId=f1b090fc-1f0b-4742-bbe4-14ccf2586771&autoAuth=true&ctid=0a812a92-d516-4867-adcf-2d2b3ce122ef" target="_blank" class="image fit"><img src="images/power-bi-vector-logo-2022.jpg" alt="Power BI Logo" /></a>
-									<p>Designed and developed multiple interactive Power BI dashboards for various datasets, enabling stakeholders to visualize key performance indicators and make data-driven decisions.</p>
-									<ul class="actions special">
-										<li><a href="https://app.powerbi.com/reportEmbed?reportId=f1b090fc-1f0b-4742-bbe4-14ccf2586771&autoAuth=true&ctid=0a812a92-d516-4867-adcf-2d2b3ce122ef" target="_blank" class="button">View Dashboard</a></li>
-									</ul>
-								</article>
+        .card-tech {
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-								<article>
-									<header>
-										<span class="date">Deep Learning | ANN</span>
-										<h2><a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" target="_blank">Customer Churn<br />
-										Predictor</a></h2>
-									</header>
-									<a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" target="_blank" class="image fit"><img src="images/banking-investment-wealth-growth-symbols_53562-10644.avif" alt="Finance Graph" /></a>
-									<p>Implemented an Artificial Neural Network (ANN) to predict customer churn for a banking institution, providing actionable insights for retention strategies and reducing churn by X% (add if applicable).</p>
-									<ul class="actions special">
-										<li><a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" target="_blank" class="button">Live Demo</a></li>
-										<li><a href="https://github.com/datta4549/ANN-Classification-Churn" target="_blank" class="button alt icon brands fa-github">View Code</a></li>
-									</ul>
-								</article>
+        .card-title { font-size: 1.25rem; margin-bottom: 0.5rem; }
 
-								<article>
-									<header>
-										<span class="date">Machine Learning | Regression</span>
-										<h2><a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/" target="_blank">Estimated Salary<br />
-										Predictor</a></h2>
-									</header>
-									<a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/" target="_blank" class="image fit"><img src="images/Survey-img.png" alt="Salary Data" /></a>
-									<p>Developed a regression-based machine learning model integrated into a Streamlit app to estimate salaries based on user-provided parameters, showcasing feature engineering and model deployment skills.</p>
-									<ul class="actions special">
-										<li><a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/" target="_blank" class="button">Live Demo</a></li>
-										<li><a href="https://github.com/datta4549/ANN-Classification-Salary" target="_blank" class="button alt icon brands fa-github">View Code</a></li>
-									</ul>
-								</article>
-							</section>
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
 
-						<footer id="footer">
-							<section class="split contact">
-								<section class="alt">
-									<h3>Location</h3>
-									<p>Goa, India</p>
-								</section>
-								<section>
-									<h3>Phone</h3>
-									<p><a href="tel:+919359330800">+91 9359330800</a></p>
-								</section>
-								<section>
-									<h3>Email</h3>
-									<p><a href="mailto:naikomkar575@gmail.com">naikomkar575@gmail.com</a></p>
-								</section>
-								<section>
-									<h3>Social</h3>
-									<ul class="icons alt">
-										<li><a href="https://www.linkedin.com/in/omkarnaik2001/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-										<li><a href="https://github.com/datta4549" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-										<li><a href="mailto:naikomkar575@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-									</ul>
-								</section>
-							</section>
-						</footer>
+        .card-links {
+            display: flex;
+            gap: 1rem;
+        }
 
-					</div>
+        .btn-small {
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .btn-small:hover { color: var(--accent); }
 
-				<div id="copyright">
-						<ul><li>&copy; Omkar Naik. All rights reserved.</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
 
-			</div>
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simple hide for now */
+        }
+    </style>
+</head>
+<body>
 
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <nav>
+        <div class="logo">ON.</div>
+        <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="https://github.com/datta4549" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/omkarnaik2001/" target="_blank">LinkedIn</a>
+        </div>
+        <a href="assets/resume.pdf" target="_blank" class="btn-resume">Resume</a>
+    </nav>
 
-			<script>
-				// Typewriter effect for intro text
-				const textElement = document.getElementById('typing-text');
-				const texts = ["Data Analyst", "ML Engineer", "Python Developer", "SQL Expert"]; // Added more roles
-				let textIndex = 0;
-				let charIndex = 0;
-				let isDeleting = false;
+    <section class="hero">
+        <p>Hi, I'm Omkar Naik</p>
+        <h1>Data Analyst & <br><span>Machine Learning Engineer</span></h1>
+        <p>I build predictive models and interactive dashboards to turn complex data into clear business decisions.</p>
+        
+        <div class="social-links">
+            <a href="https://github.com/datta4549" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/omkarnaik2001/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:naikomkar575@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
 
-				function type() {
-					const currentText = texts[textIndex];
-					if (isDeleting) {
-						textElement.textContent = currentText.substring(0, charIndex - 1);
-						charIndex--;
-					} else {
-						textElement.textContent = currentText.substring(0, charIndex + 1);
-						charIndex++;
-					}
+        <div class="skills-container">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Scikit-Learn</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Streamlit</span>
+        </div>
+    </section>
 
-					if (!isDeleting && charIndex === currentText.length) {
-						isDeleting = true;
-						setTimeout(type, 2000); // Wait before deleting
-					} else if (isDeleting && charIndex === 0) {
-						isDeleting = false;
-						textIndex = (textIndex + 1) % texts.length;
-						setTimeout(type, 700); // Wait before typing next
-					} else {
-						setTimeout(type, isDeleting ? 40 : 100); // Faster deleting, normal typing
-					}
-				}
+    <h2 class="section-title" id="projects">Featured Projects</h2>
+    
+    <div class="projects-grid">
 
-				document.addEventListener('DOMContentLoaded', type);
-			</script>
+        <div class="project-card">
+            <img src="images/How-to-Use-a-Flight-Price-Tracker-to-Get-the-Best-Airfare-Possible-FT-GettyImages2.jpg" alt="Flight App" class="card-img">
+            <div class="card-content">
+                <div class="card-tech">Machine Learning • Streamlit</div>
+                <h3 class="card-title">Flight Fare Predictor</h3>
+                <p class="card-desc">A deployed ML web app that predicts flight prices with high accuracy using Random Forest algorithms and real-time inputs.</p>
+                <div class="card-links">
+                    <a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" target="_blank" class="btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="https://github.com/datta4549/Flight_Price_Prediction" target="_blank" class="btn-small"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
 
-	</body>
+        <div class="project-card">
+            <img src="images/power-bi-vector-logo-2022.jpg" alt="Power BI" class="card-img">
+            <div class="card-content">
+                <div class="card-tech">Power BI • Data Viz</div>
+                <h3 class="card-title">Business Dashboards</h3>
+                <p class="card-desc">Interactive dashboards visualizing key performance indicators (KPIs), sales trends, and customer demographics.</p>
+                <div class="card-links">
+                    <a href="https://app.powerbi.com/reportEmbed?reportId=f1b090fc-1f0b-4742-bbe4-14ccf2586771&autoAuth=true&ctid=0a812a92-d516-4867-adcf-2d2b3ce122ef" target="_blank" class="btn-small"><i class="fas fa-chart-bar"></i> View Dashboard</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/dataset-cover.jpg" alt="Holiday" class="card-img">
+            <div class="card-content">
+                <div class="card-tech">Classification • Python</div>
+                <h3 class="card-title">Holiday Package Prediction</h3>
+                <p class="card-desc">Predictive model identifying customers likely to purchase travel packages to optimize marketing strategies.</p>
+                <div class="card-links">
+                    <a href="https://github.com/datta4549/MLprojects/tree/main/Holiday%20Package%20Prediction" target="_blank" class="btn-small"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/banking-investment-wealth-growth-symbols_53562-10644.avif" alt="Churn" class="card-img">
+            <div class="card-content">
+                <div class="card-tech">Deep Learning • ANN</div>
+                <h3 class="card-title">Customer Churn Predictor</h3>
+                <p class="card-desc">Artificial Neural Network model designed to predict bank customer churn and assist in retention.</p>
+                <div class="card-links">
+                    <a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" target="_blank" class="btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    <a href="https://github.com/datta4549/ANN-Classification-Churn" target="_blank" class="btn-small"><i class="fab fa-github"></i> Code</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Omkar Naik. Built with code.</p>
+    </footer>
+
+</body>
 </html>
