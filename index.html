@@ -1,150 +1,222 @@
 <!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Omkar Naik Portfolio</title>
+		<title>Omkar Naik | Data Analyst Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		<style>
+			/* Typewriter Cursor */
+			.typewriter-text {
+				border-right: 2px solid rgba(255, 255, 255, 0.75);
+				padding-right: 5px;
+				animation: blink 0.75s step-end infinite;
+			}
+			@keyframes blink {
+				from, to { border-color: transparent }
+				50% { border-color: rgba(255, 255, 255, 0.75); }
+			}
+			
+			/* Image Zoom Effect */
+			.image.fit img, .image.main img {
+				transition: transform 0.3s ease;
+			}
+			.image.fit:hover img, .image.main:hover img {
+				transform: scale(1.03);
+			}
+
+			/* Tech Stack Icons */
+			.tech-stack {
+				display: flex;
+				justify-content: center;
+				gap: 20px;
+				margin-bottom: 2rem;
+				flex-wrap: wrap;
+			}
+			.tech-stack i {
+				font-size: 2rem;
+				opacity: 0.8;
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+		<div id="wrapper" class="fade-in">
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>omkar naik portfolio<br />
-						</h1>
-						<p>Looking for roles in Data science & Data Analyst. I am skilled in Python , GIT, visualization tools, 
-							Machine Learning libraries such as Scikit-learn, excel, SQL, MongoDB.</p>
+				<div id="intro">
+						<h1>Omkar Naik</h1>
+						<p>Transforming raw data into actionable insights.<br />
+						I am a <span id="typing-text" class="typewriter-text">Data Analyst</span></p>
+						
+						<p style="font-size: 0.8rem; opacity: 0.8;">
+							Python • SQL • MongoDB • Scikit-Learn • Power BI
+						</p>
+
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
 					</div>
 
-				<!-- Header -->
-					<header id="header">
+				<header id="header">
 						<a href="index.html" class="logo">Omkar Naik</a>
 					</header>
 
-				<!-- Nav -->
-					<nav id="nav">
+				<nav id="nav">
 						<ul class="links">
 							<li class="active"><a href="index.html">Projects</a></li>
-						</ul>
+							</ul>
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/omkarnaik2001/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/datta4549" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="assets/resume.pdf" target="_blank" class="icon solid fa-file-pdf"><span class="label">Resume</span></a></li>
+							<li><a href="https://www.linkedin.com/in/omkarnaik2001/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+							<li><a href="https://github.com/datta4549" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
-				<!-- Main -->
-					<div id="main">
+				<div id="main">
 
-						<!-- Featured Post -->
-							<article class="post featured">
+						<article class="post featured">
 								<header class="major">
-									<h2><a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/">Flights Fare Predictor: A Streamlit-Powered Machine Learning Web App<br />
-									</a></h2>
+									<span class="date">Featured Project</span>
+									<h2><a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" target="_blank">Flights Fare<br />
+									Predictor</a></h2>
+									<p>A Streamlit-powered Machine Learning web application that predicts flight prices with high accuracy using Random Forest algorithms. Features interactive visualizations and real-time data processing.</p>
 								</header>
-								<a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" class="image main"><img src="images/How-to-Use-a-Flight-Price-Tracker-to-Get-the-Best-Airfare-Possible-FT-GettyImages2.jpg" alt="" /></a>
+								<a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" target="_blank" class="image main"><img src="images/How-to-Use-a-Flight-Price-Tracker-to-Get-the-Best-Airfare-Possible-FT-GettyImages2.jpg" alt="Flight Prediction App" /></a>
 								<ul class="actions special">
-									<li><a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" class="button large">view project</a></li>
+									<li><a href="https://flight-price-prediction-chbutyyithqypdyxtvjq6b.streamlit.app/" target="_blank" class="button large">View Live App</a></li>
+									<li><a href="https://github.com/datta4549" target="_blank" class="button large icon brands fa-github">View Code</a></li>
 								</ul>
 							</article>
 
-						<!-- Posts -->
-							<section class="posts">
+						<section class="posts">
+								
 								<article>
 									<header>
-										<h2><a href="#"> Holiday Package Prediction<br />
-										</a></h2>
+										<span class="date">Classification Model</span>
+										<h2><a href="https://github.com/datta4549/MLprojects" target="_blank">Holiday Package<br />
+										Prediction</a></h2>
 									</header>
-									<a href="https://github.com/datta4549/MLprojects" class="image fit"><img src="images/dataset-cover.jpg" alt="" /></a>
-									<p>ML model to predict which customer is likely to purchase the newly introduced travel package.</p>
+									<a href="https://github.com/datta4549/MLprojects" target="_blank" class="image fit"><img src="images/dataset-cover.jpg" alt="Travel Dataset" /></a>
+									<p>Developed a predictive model to identify customers most likely to purchase new travel packages, optimizing marketing targeting strategies.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/datta4549/MLprojects" class="button">view project</a></li>
+										<li><a href="https://github.com/datta4549/MLprojects" target="_blank" class="button">View Code</a></li>
 									</ul>
 								</article>
+
 								<article>
 									<header>
-										<h2><a href="#">Power BI <br />
-										</a></h2>
+										<span class="date">Data Visualization</span>
+										<h2><a href="#" target="_blank">Power BI<br />
+										Dashboards</a></h2>
 									</header>
-									<a href="https://app.powerbi.com/reportEmbed?reportId=f1b090fc-1f0b-4742-bbe4-14ccf2586771&autoAuth=true&ctid=0a812a92-d516-4867-adcf-2d2b3ce122ef" class="image fit"><img src="images/power-bi-vector-logo-2022.jpg" alt="" /></a>
-									<p>This holds all of my  Power BI Projects</p>
+									<a href="https://app.powerbi.com/reportEmbed?reportId=f1b090fc-1f0b-4742-bbe4-14ccf2586771&autoAuth=true&ctid=0a812a92-d516-4867-adcf-2d2b3ce122ef" target="_blank" class="image fit"><img src="images/power-bi-vector-logo-2022.jpg" alt="Power BI Logo" /></a>
+									<p>A comprehensive collection of interactive dashboards visualizing business KPIs, sales trends, and customer demographics.</p>
 									<ul class="actions special">
-										<li><a href="https://app.powerbi.com/reportEmbed?reportId=f1b090fc-1f0b-4742-bbe4-14ccf2586771&autoAuth=true&ctid=0a812a92-d516-4867-adcf-2d2b3ce122ef" class="button">view projects</a></li>
+										<li><a href="https://app.powerbi.com/reportEmbed?reportId=f1b090fc-1f0b-4742-bbe4-14ccf2586771&autoAuth=true&ctid=0a812a92-d516-4867-adcf-2d2b3ce122ef" target="_blank" class="button">View Dashboard</a></li>
 									</ul>
 								</article>
+
 								<article>
 									<header>
-										<h2><a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/">Customer Churn Predictor<br />
-										</a></h2>
+										<span class="date">Deep Learning / ANN</span>
+										<h2><a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" target="_blank">Customer Churn<br />
+										Predictor</a></h2>
 									</header>
-									<a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" class="image fit"><img src="images/banking-investment-wealth-growth-symbols_53562-10644.avif" alt="" /></a>
-									<p>A streamlit powered web app customer churn predictor  </p>
+									<a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" target="_blank" class="image fit"><img src="images/banking-investment-wealth-growth-symbols_53562-10644.avif" alt="Finance Graph" /></a>
+									<p>An Artificial Neural Network (ANN) based web app designed to predict bank customer churn, helping institutions retain valuable clients.</p>
 									<ul class="actions special">
-										<li><a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" class="button">view project</a></li>
+										<li><a href="https://ann-classification-churn-yxk3v7pnargczxkqpwinnh.streamlit.app/" target="_blank" class="button">Live Demo</a></li>
 									</ul>
 								</article>
+
 								<article>
 									<header>
-									<header>
-										<h2><a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/">Estimated Salary Predictor<br />
-										</a></h2>
+										<span class="date">Regression Analysis</span>
+										<h2><a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/" target="_blank">Estimated Salary<br />
+										Predictor</a></h2>
 									</header>
-									</header>
-									<a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/" class="image fit"><img src="images/Survey-img.png" alt="" /></a>
-									<p>A streamlit powered web app to estimate salary</p>
+									<a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/" target="_blank" class="image fit"><img src="images/Survey-img.png" alt="Salary Data" /></a>
+									<p>A data-driven application that estimates user salaries based on demographic and professional parameters using regression techniques.</p>
 									<ul class="actions special">
-										<li><a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/" class="button">view project</a></li>
+										<li><a href="https://ann-classification-churn-g9dhpgpdwudcf4abdmd5um.streamlit.app/" target="_blank" class="button">Live Demo</a></li>
 									</ul>
 								</article>
 							</section>
 
-
-
-						<section class="split contact">
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">+91 9359330800</a></p>
+						<footer id="footer">
+							<section class="split contact">
+								<section class="alt">
+									<h3>Location</h3>
+									<p>Goa, India</p>
+								</section>
+								<section>
+									<h3>Phone</h3>
+									<p><a href="tel:+919359330800">+91 9359330800</a></p>
+								</section>
+								<section>
+									<h3>Email</h3>
+									<p><a href="mailto:naikomkar575@gmail.com">naikomkar575@gmail.com</a></p>
+								</section>
+								<section>
+									<h3>Social</h3>
+									<ul class="icons alt">
+										<li><a href="https://www.linkedin.com/in/omkarnaik2001/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+										<li><a href="https://github.com/datta4549" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+										<li><a href="mailto:naikomkar575@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+									</ul>
+								</section>
 							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">naikomkar575@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://www.linkedin.com/in/omkarnaik2001/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/datta4549" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+						</footer>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+				<div id="copyright">
+						<ul><li>&copy; Omkar Naik</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 					</div>
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				const textElement = document.getElementById('typing-text');
+				const texts = ["Data Analyst", "Python Developer", "ML Enthusiast", "SQL Expert"];
+				let textIndex = 0;
+				let charIndex = 0;
+				let isDeleting = false;
+
+				function type() {
+					const currentText = texts[textIndex];
+					if (isDeleting) {
+						textElement.textContent = currentText.substring(0, charIndex - 1);
+						charIndex--;
+					} else {
+						textElement.textContent = currentText.substring(0, charIndex + 1);
+						charIndex++;
+					}
+
+					if (!isDeleting && charIndex === currentText.length) {
+						isDeleting = true;
+						setTimeout(type, 2000); // Wait before deleting
+					} else if (isDeleting && charIndex === 0) {
+						isDeleting = false;
+						textIndex = (textIndex + 1) % texts.length;
+						setTimeout(type, 500); // Wait before typing next
+					} else {
+						setTimeout(type, isDeleting ? 50 : 100);
+					}
+				}
+
+				document.addEventListener('DOMContentLoaded', type);
+			</script>
 
 	</body>
 </html>
